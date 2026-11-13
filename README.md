@@ -24,3 +24,19 @@ Validate extracted fields against the supplied text; schema validation alone doe
 - Separate CLI input from reusable extraction logic.
 - Test missing fields, malformed output and unsupported facts.
 - Add a labeled extraction evaluation set.
+
+## Repository overview
+
+Schema-based movie metadata extraction from text using Mistral, LangChain and Pydantic.
+
+**Suggested GitHub topics:** `information-extraction` `structured-output` `pydantic` `langchain` `mistral-ai` `streamlit`.
+
+## System architecture
+
+```mermaid
+flowchart LR
+  Text --> Prompt[Extraction prompt]
+  Prompt --> Model[Mistral]
+  Model --> Schema[Pydantic schema]
+  Schema --> Output[Structured fields]
+```
